@@ -38,7 +38,7 @@ export default function PaymentForm() {
         const payload = { name, cardNumber, cvv, expirationDate };
         console.log("Sending data:", payload); // Debugging step
 
-        axios.post('http://localhost:5000/cardetails', payload)
+        axios.post('https://yellowmanga-server.onrender.com/cardetails', payload)
             .then((response) => {
                 console.log("Response from server:", response.data);
                 setCardNumber('');
